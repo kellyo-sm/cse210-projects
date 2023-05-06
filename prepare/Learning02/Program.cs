@@ -8,7 +8,7 @@ class Program
         Console.WriteLine("Hello Learning02 World!");
 
         Job job1 = new Job();
-        job1._jobTitle = "Software Engineer";
+        job1._jobTitle = "Software Engineer\nPaper Carrier".Replace("\n", Environment.NewLine);
         job1._company = "Microsoft";
         job1._startYear = 1998;
         job1._endYear = 2002;
