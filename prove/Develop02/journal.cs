@@ -4,36 +4,27 @@ using System.IO;
 public class Journal
 
 {
-    private List<Entry> _entries = new List<Entry>();
+    private List<Entry> _entries;
 
     public void AddEntry(Entry entry)
     {
-
+        Console.ReadLine();
     }
-
-    // public void DisplayEntries()
-    // {
-
-    // }
 
     public static List<Entry> DisplayEntries()
     {
         Console.WriteLine("Reading from file list....");
-        List<Entry> _
+
     }
 
-    // public static void SaveToFile(List<Entry> )
-    // {
-    // string filename = "Journal.txt";
+    public void SaveToFile(string userInput)
 
-    // using (StreamWriter outputFile = new StreamWriter(filename))
-    // {
-    //     foreach (Entry _entry in Entry)
-    //     {
-    //         outputFile.WriteLine()
-    //     }
-    // }
-    // }
+    {
+        string filename = userInput + ".json";
+        List<journalJsonEntry> _passage = new List<journalJsonEntry>();
+
+        foreach ()
+    }
 
     public void LoadFromFile()
     {

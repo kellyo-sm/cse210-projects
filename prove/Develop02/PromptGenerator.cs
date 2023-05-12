@@ -6,35 +6,58 @@ public class PromptGenerator
 
 {
 
-    public List<string> _prompts = new List<string>();
+    public List<string> _prompts;
 
     public void GeneratePrompt()
     {
-        Random random = new Random();
-        string[] _prompts = {
-                "Who was the most interesting person I interacted with today?",
-                "What was the best part of my day?",
-                "How did I see the hand of the Lord in my life today?",
-                "what was the strongest emotion I felt today?",
-                "If I had one thing I could do over today, what would it be?",
-                "What are some things I am grateful for today?",
-                "Share a story from your family history...",
-                "Talk about your favorite family traditions...",
-                "Explain an instance where you saw the Lord's hand at work in your life today",
-                "Share personal insights into your favorite quote or conference talk.",
-                "Share your favorite scripture story and explain why you like it.",
-                "Write about your perspective on a current event."
-            };
+
+
+        var random = new Random();
+        string prompts = Random.Next(_prompts);
+
     }
 
     public void LoadPromptsFromFile()
     {
+        Console.WriteLine("Select a Prompt:  ");
+
+        string answer = Console.ReadLine();
+
+        int counter = 0;
+        string line;
+
+        // read file & display each line
+        System.IO.StreamReader file = new System.IO.StreamReader("../journal.txt");
+
+        while ((line = file.ReadLine()) != null)
+        {
+            Console.WriteLine(line);
+            counter++;
+        }
+
+        file.Close();
+
+        Console.ReadLine();
+
 
     }
 
     public void AddPrompt()
     {
+        Console.WriteLine("Would you like to add a prompt? ");
+        string answer = Console.ReadLine();
 
+        if (answer == "yes")
+        {
+            var addPrompt = new List<string>();
+
+            Console.WriteLine("Add prompt: ");
+            string newPrompt = Console.ReadLine();
+
+            newPrompt.GeneratePrompt.Add();
+
+
+        }
     }
 
     public void RemovePrompt()
